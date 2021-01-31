@@ -1,0 +1,7 @@
+
+1. after click on Generate pin button user see a random 4 digit number in the UI.
+2. Then use click the numeric-key button on the right side and display the key he  typed in the UI
+3.Then compare two numbers if they are same display matching successful massage in  the UI
+4. if not matches display did not match massage in the UI.
+5 . when use click on re-start button the program will be start newly
+6.when i click C button it will be deleted the last one character
