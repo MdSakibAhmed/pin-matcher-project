@@ -29,9 +29,12 @@ let displayKeyValues = (function () {
         const key = getKeyNumber[i];
         key.addEventListener("click", function (e) {
             let targetedKey = e.target;
-            if (targetedKey.innerText == "C") {
+            if (targetedKey.innerText == "B") {
                 keyValue = keyValue.slice(0, -1);
-            } else {
+            } else if(targetedKey.innerText == "C"){
+                keyValue = "";
+
+            } else{
                 keyValue = keyValue + targetedKey.innerText;
             }
 
@@ -52,11 +55,13 @@ let getMatchResult = (function () {
 
         if (genaratedNumber == typedKeyNumber) {
             document.getElementById("success-match").style.display = "block";
+            document.getElementById("failed-match").style.display = "none";
         } else {
             if(maxWrongCount >0){
                 maxWrongCount--
                 document.getElementById("wrong-count").innerText = maxWrongCount;
                 document.getElementById("failed-match").style.display = "block";
+                document.getElementById("success-match").style.display = "none";
 
             }
             else{
