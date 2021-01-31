@@ -29,16 +29,20 @@ let displayKeyValues = (function () {
         const key = getKeyNumber[i];
         key.addEventListener("click", function (e) {
             let targetedKey = e.target;
-            if (targetedKey.innerText == "B") {
-                keyValue = keyValue.slice(0, -1);
-            } else if(targetedKey.innerText == "C"){
-                keyValue = "";
+if(targetedKey.innerText.length == 1){
+    if (targetedKey.innerText == "B") {
+        keyValue = keyValue.slice(0, -1);
+    } else if(targetedKey.innerText == "C"){
+        keyValue = "";
 
-            } else{
-                keyValue = keyValue + targetedKey.innerText;
-            }
+    } else{
+        keyValue = keyValue + targetedKey.innerText;
+    }
 
-            document.getElementById("display-key-value").value = keyValue;
+    document.getElementById("display-key-value").value = keyValue;
+}
+
+           
         })
     }
 })()
